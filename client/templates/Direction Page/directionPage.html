@@ -1,0 +1,61 @@
+<template name="directionPage">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Tunjukkan Arah</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+
+    {{#ionContent}}
+    <div class="list">
+        
+        <label class="item item-input item-select">
+            <div class="input-label">
+                Tujuan
+            </div>
+            <select class="data-city" id="end" onchange="calcRoute();">
+                <option value="https://www.google.com/maps/dir/Current+Location/sukorame">Sukorame</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Bluluk Kecamatan,+Cangkring,+Bluluk">Bluluk</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/ngimbang,+east+java">Ngimbang</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Sambeng,+East+Java">Sambeng</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Mantup+Kecamatan,+Mantup">Mantup</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Kembangbahu,+East+Java">Kembangbahu</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Sugio,+East+Java">Sugio</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Kedungpring,+East+Java">Kedungpring</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Modo,+East+Java">Modo</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Babat,+East+Java">Babat</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Pucuk,+East+Java">Pucuk</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Sukodadi,+East+Java">Sukodadi</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Kecamatan+Lamongan,+East+Java">Lamongan</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Tikung,+East+Java">Tikung</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Sarirejo,+East+Java">Sarirejo</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Deket,+East+Java">Deket</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Glagah,+East+Java">Glagah</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Karangbinangun,+East+Java">Karangbinangun</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Turi,+East+Java">Turi</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Kalitengah,+East+Java">Kalitengah</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Karanggeneng,+East+Java">Karanggeneng</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Sekaran,+East+Java">Sekaran</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Maduran,+East+Java">Maduran</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Laren,+East+Java">Laren</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Solokuro,+East+Java">Solokuro</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Paciran,+East+Java">Paciran</option>
+                <option value="https://www.google.com/maps/dir/Current+Location/Brondong,+East+Java">Brondong</option>
+            </select>
+        </label>
+    </div>
+    <button class="button-click button button-block button-assertive" type="button">Tunjukkan Arah</button>
+
+    <script>
+        $('button').click(function() {
+            url = $('select').val();
+            window.open(url);
+        });
+    </script>
+    {{/ionContent}}
+    
+  {{/ionView}}
+
+</template>
